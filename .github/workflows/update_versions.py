@@ -16,7 +16,7 @@ stable = None
 dirs = []
 
 if os.path.exists(os.path.join(base, "heads")):
-    for branch in os.listdir(os.path.join(base, "heads")):
+    for branch in sorted(os.listdir(os.path.join(base, "heads"))):
         if branch not in branch_names:
             continue
         bname = branch_names[branch]
