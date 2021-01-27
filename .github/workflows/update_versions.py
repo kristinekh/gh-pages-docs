@@ -25,7 +25,7 @@ if os.path.exists(os.path.join(base, "tags")):
     tags = []
     for tag in os.listdir(os.path.join(base, "tags")):
         tags.append(tag)
-    tags = tags.sort(key=lambda s: map(int, s.strip("v").split('.')))
+    tags.sort(key=lambda s: map(int, s.strip("v").split('.')))
     for tag in tags[:-1]:
         dirs.append("/".join((base, "tags", tag)) + f",{tag}")
     if len(tags) != 0:
